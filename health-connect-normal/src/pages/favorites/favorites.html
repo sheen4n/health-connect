@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Favorite Facilities</ion-title>
+
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-searchbar color="primary" (ionInput)="searchFavorites($event)" placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngIf="isEmpty">
+    <ion-card-header>No Favorites</ion-card-header>
+
+    <ion-card-content>
+      <p>You currently have no favorites.</p>
+      <p>First select a facility, then you can favorite them.</p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-list>
+    <ion-card *ngFor="let favorite of favorites">
+
+      <button ion-item (click)="goToFacility(favorite)">
+        <ion-item>
+
+          <ion-avatar item-left>
+            <img src="http://cdn.centralfloridalifestyle.com/2016/09/modern-medical-advancements.jpg" />
+          </ion-avatar>
+          <h2>{{favorite.name}}</h2>
+          <ion-badge [color]="getBadgeClass(favorite)">{{favorite.publicOrPrivate}}</ion-badge>
+          <br/>
+
+        </ion-item>
+
+        <img src="https://www.bestmasterofscienceinnursing.com/wp-content/uploads/2015/03/Kaiser-foundation-hospital-modern-hospitals.jpg?x86614"
+          style="width:500px; height:200px;" />
+
+        <ion-card-content>
+          <p>Facility Type : {{favorite.facilityType}}</p>
+          <br/>
+
+          <p>Description:</p>
+
+          <p>{{favorite.description}}</p>
+          <br/>
+          <p>Opening Hours:</p>
+          <p>{{favorite.openingHours}}</p>
+          <br/>
+
+          <p>Service Provided:</p>
+          <p>{{favorite.serviceProvided}}</p>
+          <br/>
+
+          <p>Contact: {{favorite.contactNumber}}</p>
+
+        </ion-card-content>
+
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              11h ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </button>
+
+    </ion-card>
+  </ion-list>
+
+</ion-content>

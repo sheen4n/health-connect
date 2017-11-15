@@ -1,0 +1,53 @@
+<!--
+  Generated template for the InboxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar no-border-bottom color="primary">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>All Medical Facilities</ion-title>
+
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-searchbar color="primary" (ionInput)="searchFacilities($event)" placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content>
+  <div class="header-image"></div>
+  <ion-list>
+
+    <ion-item *ngFor="let facility of facilities">
+
+      <button ion-item (click)="goToFacility(facility)">
+        <ion-row>
+          <ion-col col-2>
+              <ion-avatar item-left>
+                  <img src="https://www.bestmasterofscienceinnursing.com/wp-content/uploads/2015/03/Kaiser-foundation-hospital-modern-hospitals.jpg?x86614" />
+                </ion-avatar>
+          </ion-col>
+          <ion-col offset-2 col-6>
+              <h2>{{facility.name}}</h2>
+              <ion-badge [color]="getDisplayBadgeClass(facility)">{{facility.publicOrPrivate}}</ion-badge>
+              <p>Facility Type: {{facility.facilityType}}</p>
+              <p>Contact Number: {{facility.contactNumber}}</p>
+            </ion-col>
+
+        </ion-row>
+
+      </button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
