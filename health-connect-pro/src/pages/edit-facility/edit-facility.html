@@ -1,0 +1,183 @@
+<!--
+  Generated template for the EditFacilityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Facility</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="add-facility-page">
+
+  <form #createFacilityForm="ngForm" novalidate>
+      <ion-list>
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Facility Name</ion-label>
+            <ion-input [(ngModel)]="facility.name" name="name" type="text" #name="ngModel" placeholder="Facility Name" required>
+            </ion-input>
+          </ion-item>
+          <p ion-text [hidden]="name.valid || submitted == false" color="danger" padding-left>
+            Name is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Address</ion-label>
+            <ion-input [(ngModel)]="facility.address" name="address" type="text" #address="ngModel" placeholder="Address" required>
+            </ion-input>
+          </ion-item>
+          <p ion-text [hidden]="address.valid || submitted == false" color="danger" padding-left>
+            Address is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Postal Code</ion-label>
+            <ion-input [(ngModel)]="facility.postal" (ionChange)="onPostalChange(facility.postal)" minlength="6" maxlength="6" name="postal" type="text" #postal="ngModel"
+              placeholder="Postal Code" required>
+            </ion-input>
+          </ion-item>
+          <p ion-text [hidden]="postal.valid || submitted == false" color="danger" padding-left>
+            Postal is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Latitude</ion-label>
+            <ion-input [(ngModel)]="facility.lat" type="number" placeholder="Latitude" readonly #lat="ngModel" name="lat"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Longitude</ion-label>
+            <ion-input [(ngModel)]="facility.lng" type="number" placeholder="Longitude" readonly #lng="ngModel" name="lng"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Detected Address</ion-label>
+            <ion-input [(ngModel)]="facility.detectedAddress" type="text" placeholder="Address" readonly #detectedAddress="ngModel" name="detectedAddress"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Email</ion-label>
+            <ion-input [(ngModel)]="facility.email" name="email" type="email" #email="ngModel" placeholder="Email" required>
+            </ion-input>
+          </ion-item>
+          <p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+            Email Contact is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Contact Number</ion-label>
+            <ion-input [(ngModel)]="facility.contactNumber" name="contactNumber" type="tel" minlength="8" maxlength="8" #contactNumber="ngModel" placeholder="Contact Number" required>
+            </ion-input>
+          </ion-item>
+          <p ion-text [hidden]="contactNumber.valid || submitted == false" color="danger" padding-left>
+            Contact Number must be valid
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Public or Private Sector</ion-label>
+            <ion-select [(ngModel)]="facility.publicOrPrivate" name="publicOrPrivate" #publicOrPrivate="ngModel" placeholder="Select One" required>
+              <ion-option value="Public">Public</ion-option>
+              <ion-option value="Private">Private</ion-option>
+            </ion-select>
+          </ion-item>
+          <p ion-text [hidden]="publicOrPrivate.valid || submitted == false" color="danger" padding-left>
+            Sector - Private or Public is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Facility Type</ion-label>
+            <ion-select [(ngModel)]="facility.facilityType" name="facilityType" #facilityType="ngModel" placeholder="Select One" required>
+              <ion-option value="Hospital">Hospital</ion-option>
+              <ion-option value="Polyclinic">Polyclinic</ion-option>
+              <ion-option value="Family Clinic">Family Clinic</ion-option>
+              <ion-option value="Pharmacy">Pharmacy</ion-option>
+            </ion-select>
+          </ion-item>
+          <p ion-text [hidden]="facilityType.valid || submitted == false" color="danger" padding-left>
+            Facility Type is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Description</ion-label>
+            <ion-textarea [(ngModel)]="facility.description" name="description" #description="ngModel" required placeholder="Description"></ion-textarea>
+          </ion-item>
+
+          <p ion-text [hidden]="description.valid || submitted == false" color="danger" padding-left>
+            Description is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Opening Hours</ion-label>
+            <ion-textarea [(ngModel)]="facility.openingHours" name="openingHours" #openingHours="ngModel" required placeholder="Opening Hours"></ion-textarea>
+          </ion-item>
+
+          <p ion-text [hidden]="openingHours.valid || submitted == false" color="danger" padding-left>
+            Opening Hours is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Peak Hours</ion-label>
+            <ion-textarea [(ngModel)]="facility.peakHours" name="peakHours" #peakHours="ngModel" required placeholder="Peak Hours"></ion-textarea>
+          </ion-item>
+
+          <p ion-text [hidden]="peakHours.valid || submitted == false" color="danger" padding-left>
+            Peak Hours is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+            <ion-label stacked color="primary">Service Provided</ion-label>
+            <ion-textarea [(ngModel)]="facility.serviceProvided" name="serviceProvided" #serviceProvided="ngModel" required placeholder="Service Provided (E.g. Gynaecologist, Paediatrics, Surgery"></ion-textarea>
+          </ion-item>
+
+          <p ion-text [hidden]="serviceProvided.valid || submitted == false" color="danger" padding-left>
+            Peak Hours is required
+          </p>
+
+          <ion-item>
+              <ion-icon name="pin" item-start></ion-icon>
+              <ion-label stacked color="primary">Healthcare Group</ion-label>
+              <ion-select [(ngModel)]="facility.healthcareGroup" name="healthcareGroup" #healthcareGroup="ngModel" placeholder="Select One" required>
+                  <ion-option value="None">None</ion-option>
+                  <ion-option value="Alexandra Health System">Alexandra Health System</ion-option>
+                  <ion-option value="Eastern Health Alliance">Eastern Health Alliance</ion-option>
+                  <ion-option value="JurongHealth">JurongHealth</ion-option>
+                  <ion-option value="National Healthcare Group">National Healthcare Group</ion-option>
+                  <ion-option value="National University Health System">National University Health System</ion-option>
+                  <ion-option value="SingHealth">SingHealth</ion-option>
+                </ion-select>
+          </ion-item>
+
+          <p ion-text [hidden]="healthcareGroup.valid || submitted == false" color="danger" padding-left>
+            Select one of the options
+          </p>
+        </ion-list>
+
+    <div padding>
+      <button ion-button (click)="updateFacility(createFacilityForm)" type="submit" block>Update</button>
+    </div>
+    <div padding>
+      <button color="danger" ion-button (click)="deleteFacility(facility._id)" type="submit" block>Delete Facility</button>
+    </div>
+
+  </form>
+
+</ion-content>
