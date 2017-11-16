@@ -26,9 +26,9 @@ There are 4 Folders in this Project.
 
 1 - api-server : This is the folder containing the files for the api-server. Can change directory to this folder and run the command "npm install" to install the node_modules and "nodemon server.js" to run the api server locally.
 
-2 - websocket-io : This is the folder containing the files for websocket-io server. It is used to listen and emit socket connections for chatting. Can change directory to this folder and run command "npm install" to install the node_modules and "node server.js" to start the server locally.
+2 - websocket-io : This is the folder containing the files for websocket-io server. It is used to listen and emit socket connections for chatting. Can change directory to this folder and run command "npm install" to install the node_modules, "ionic cordova prepare" to install plugins and and "node server.js" to start the server locally.
 
-3 - health-connect-normal : This is the folder containing the frontend files used to develop the application. To run the application locally, can change directory to this folder and run command "npm install" to install the node_modules and "ionic serve" to start local testing. 
+3 - health-connect-normal : This is the folder containing the frontend files used to develop the application. To run the application locally, can change directory to this folder and run command "npm install" to install the node_modules , "ionic cordova prepare" to install plugins and "ionic serve" to start local testing. 
 
 To emulate browser environment, run command "ionic cordova run browser"
 To emulate android environment, run command "ionic cordova run android" (Must have android emulator installed in local machine)
