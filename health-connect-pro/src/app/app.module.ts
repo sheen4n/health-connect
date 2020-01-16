@@ -43,12 +43,12 @@ import { GoogleMaps, GoogleMap,
   import { Geolocation } from '@ionic-native/geolocation';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCgHczEUO2Q7zdqBCzZ4yGCPX3tBKQp1PM",
-  authDomain: "ionic-frontend-sheen.firebaseapp.com",
-  databaseURL: "https://ionic-frontend-sheen.firebaseio.com",
-  projectId: "ionic-frontend-sheen",
-  storageBucket: "ionic-frontend-sheen.appspot.com",
-  messagingSenderId: "498093185822"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 }
 
 @NgModule({
