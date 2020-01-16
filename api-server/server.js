@@ -24,8 +24,8 @@ var favorite = require('./favorite');
 //Mongoose Settings
 mongoose.Promise = Promise;
 
-// var mongooseUrl = 'mongodb://devSheen:devSheen@ds141185.mlab.com:41185/pssocial';
-var mongooseUrl = 'mongodb://devSheen:devSheen@ds155325.mlab.com:55325/rightplace';
+
+var mongooseUrl = '';
 
 mongoose.connect(mongooseUrl, { useMongoClient: true }, (err) => {
     if (!err) {
