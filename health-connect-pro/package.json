@@ -73,8 +73,8 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "cordova-plugin-facebook4": {
-                "APP_ID": "313698085779094",
-                "APP_NAME": "“ionicfrontendsheen”"
+                "APP_ID": "",
+                "APP_NAME": "“”"
             },
             "cordova-plugin-nativegeocoder": {
                 "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service"
@@ -83,8 +83,8 @@
                 "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
             },
             "cordova-plugin-googlemaps": {
-                "API_KEY_FOR_ANDROID": "AIzaSyBKyjF4hyowOQHRA9tCKxBYFKU9eQ-bvKk",
-                "API_KEY_FOR_IOS": "AIzaSyBKyjF4hyowOQHRA9tCKxBYFKU9eQ-bvKk"
+                "API_KEY_FOR_ANDROID": "",
+                "API_KEY_FOR_IOS": ""
             }
         },
         "platforms": [
