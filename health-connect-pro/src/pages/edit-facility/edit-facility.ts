@@ -90,7 +90,7 @@ export class EditFacilityPage {
 
   onPostalChange(postalCode) {
     var googleMapsClient = require('@google/maps').createClient({
-      key: 'AIzaSyAoD9nOgrj7ADeRao3HsjoFyeqUa8GjEEs',
+      key: '',
       Promise: Promise // 'Promise' is the native constructor.
     });
 
