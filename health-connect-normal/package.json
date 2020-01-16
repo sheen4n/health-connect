@@ -71,8 +71,8 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "cordova-plugin-googlemaps": {
-                "API_KEY_FOR_ANDROID": "AIzaSyBKyjF4hyowOQHRA9tCKxBYFKU9eQ-bvKk",
-                "API_KEY_FOR_IOS": "AIzaSyBKyjF4hyowOQHRA9tCKxBYFKU9eQ-bvKk",
+                "API_KEY_FOR_ANDROID": "",
+                "API_KEY_FOR_IOS": "",
                 "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
                 "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
             },
@@ -80,8 +80,8 @@
                 "GEOLOCATION_USAGE_DESCRIPTION": " "
             },
             "cordova-plugin-facebook4": {
-                "APP_ID": "1998508543767376",
-                "APP_NAME": "“healthconnectnormal”"
+                "APP_ID": "",
+                "APP_NAME": "“”"
             }
         },
         "platforms": [
