@@ -42,12 +42,12 @@ import { FavoriteData } from '../providers/favorite-data';
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCt9OLmHH0mv2Hn9FDh2boEBgIjEziSSrE",
-  authDomain: "health-connect-normal.firebaseapp.com",
-  databaseURL: "https://health-connect-normal.firebaseio.com",
-  projectId: "health-connect-normal",
-  storageBucket: "health-connect-normal.appspot.com",
-  messagingSenderId: "226187792919"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 }
 
 @NgModule({
